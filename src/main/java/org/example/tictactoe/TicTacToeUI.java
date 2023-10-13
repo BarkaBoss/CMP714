@@ -57,11 +57,14 @@ public class TicTacToeUI {
             public void actionPerformed(ActionEvent e) {
                 if(count % 2 == 1){
                     playerOne.add(1);
+                    btnOne.setText("X");
                 }else {
                     playerTwo.add(1);
+                    btnOne.setText("O");
                 }
                 count += 1;
                 System.out.println(count);
+                btnOne.setEnabled(false);
             }
         });
     }
