@@ -27,6 +27,7 @@ public class TicTacToeUI {
         ticTacFrame = new JFrame("X and O");
         ticTacFrame.setSize(500, 500);
         ticTacFrame.setLayout(new GridLayout(3, 3));
+        ticTacFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 
         btnOne = new JButton();
