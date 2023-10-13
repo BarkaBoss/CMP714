@@ -23,7 +23,7 @@ public class TicTacToeUI {
     JButton btnEight;
     JButton btnNine;
 
-    public void drawUi(){
+    public void drawUI(){
         ticTacFrame = new JFrame("X and O");
         ticTacFrame.setSize(500, 500);
         ticTacFrame.setLayout(new GridLayout(3, 3));
@@ -53,6 +53,7 @@ public class TicTacToeUI {
         ticTacFrame.setVisible(true);
 
         // Handling Button clicks
+
         btnOne.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -68,14 +69,64 @@ public class TicTacToeUI {
                 btnOne.setEnabled(false);
             }
         });
+
+        btnTwo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(count % 2 == 1){
+                    playerOne.add(1);
+                    btnTwo.setText("X");
+                }else {
+                    playerTwo.add(1);
+                    btnTwo.setText("O");
+                }
+                count += 1;
+                System.out.println(count);
+                btnTwo.setEnabled(false);
+            }
+        });
     }
 
     public static void main(String[] args) {
         TicTacToeUI ui = new TicTacToeUI();
-        ui.drawUi();
+        ui.drawUI();
     }
 
     public void checkWin(){
+        if (playerOne.contains(1) && playerOne.contains(2) && playerOne.contains(3)){
+            // TODO display player one wins and reset game
+        }else if (playerOne.contains(4) && playerOne.contains(5) && playerOne.contains(6)){
 
+        }else if (playerOne.contains(7) && playerOne.contains(8) && playerOne.contains(9)){
+
+        }else if (playerOne.contains(1) && playerOne.contains(4) && playerOne.contains(7)){
+
+        }else if (playerOne.contains(2) && playerOne.contains(5) && playerOne.contains(8)){
+
+        }else if (playerOne.contains(3) && playerOne.contains(6) && playerOne.contains(9)){
+
+        }else if (playerOne.contains(1) && playerOne.contains(5) && playerOne.contains(9)){
+
+        }else if (playerOne.contains(3) && playerOne.contains(5) && playerOne.contains(7)){
+
+        }
+        // TODO Player Two winning Settings
+
+    }
+
+    void reset(){
+        count = 1;
+        playerOne.clear();
+        playerTwo.clear();
+
+        btnOne.setEnabled(true);
+        btnTwo.setEnabled(true);
+        btnThree.setEnabled(true);
+        btnFour.setEnabled(true);
+        btnFive.setEnabled(true);
+        btnSix.setEnabled(true);
+        btnSeven.setEnabled(true);
+        btnEight.setEnabled(true);
+        btnNine.setEnabled(true);
     }
 }
