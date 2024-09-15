@@ -25,7 +25,7 @@ public class Stack {
         }else{
             array[top+1] = element;
             top++;
-            System.out.println(top+" === "+element);
+            System.out.println(top+" ===== "+element);
         }
     }
 
@@ -48,6 +48,7 @@ public class Stack {
         myStack.push(7);
         myStack.push(4);
         myStack.push(14);
+        myStack.push(19);
         myStack.pop();
     }
 }
