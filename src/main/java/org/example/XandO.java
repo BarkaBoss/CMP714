@@ -74,7 +74,7 @@ public class XandO {
 
     void checkWin(){
         if(playerOne.contains(1) && playerOne.contains(2) && playerOne.contains(3)){
-            
+            JOptionPane.showMessageDialog(null, "Player One Wins");
         }
     }
 
